@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/toyshopPages/mainPage/mainPage",
     "pages/index/index",
     "pages/userConsole/userConsole",
     "pages/storageConsole/storageConsole",
@@ -14,7 +15,6 @@
     "pages/im/im",
     "pages/im/room/room",
     "pages/toyshopPages/account/account",
-    "pages/toyshopPages/mainPage/mainPage",
     "pages/toyshopPages/market/market",
     "pages/toyshopPages/shoppingCart/shoppingCart"
   ],
@@ -22,8 +22,29 @@
     "backgroundColor": "#F6F6F6",
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#F6F6F6",
-    "navigationBarTitleText": "云开发 QuickStart",
+    "navigationBarTitleText": "镇沅小霸王养成中心",
     "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "custom": true,
+    "color": "#7A7E83",
+    "selectedColor": "#3cc51f",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/toyshopPages/mainPage/mainPage",
+        "iconPath": "images/tabBar/icon_component.png",
+        "selectedIconPath": "images/tabBar/icon_component_HL.png",
+        "text": "活动"
+      },
+      {
+        "pagePath": "pages/toyshopPages/market/market",
+        "iconPath": "images/tabBar/icon_component.png",
+        "selectedIconPath": "images/tabBar/icon_component_HL.png",
+        "text": "商城"
+      }
+    ]
   },
   "sitemapLocation": "sitemap.json",
   "style": "v2"
