@@ -12,7 +12,11 @@
     "pages/openapi/callback/callback",
     "pages/openapi/cloudid/cloudid",
     "pages/im/im",
-    "pages/im/room/room"
+    "pages/im/room/room",
+    "pages/toyshopPages/account/account",
+    "pages/toyshopPages/mainPage/mainPage",
+    "pages/toyshopPages/market/market",
+    "pages/toyshopPages/shoppingCart/shoppingCart"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
