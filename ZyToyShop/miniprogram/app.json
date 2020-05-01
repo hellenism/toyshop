@@ -35,25 +35,25 @@
         "pagePath": "pages/toyshopPages/mainPage/mainPage",
         "iconPath": "images/tabBar/icon_API.png",
         "selectedIconPath": "images/tabBar/icon_API_HL.png",
-        "text": "1"
+        "text": "活动"
       },
       {
         "pagePath": "pages/toyshopPages/market/market",
         "iconPath": "images/tabBar/icon_API.png",
         "selectedIconPath": "images/tabBar/icon_API_HL.png",
-        "text": "2"
+        "text": "商城"
       },
       {
         "pagePath": "pages/toyshopPages/shoppingCart/shoppingCart",
         "iconPath": "images/tabBar/icon_API.png",
         "selectedIconPath": "images/tabBar/icon_API_HL.png",
-        "text": "3"
+        "text": "购物车"
       },
       {
         "pagePath": "pages/toyshopPages/account/account",
         "iconPath": "images/tabBar/icon_API.png",
         "selectedIconPath": "images/tabBar/icon_API_HL.png",
-        "text": "4"
+        "text": "个人中心"
       }
     ]
   },
