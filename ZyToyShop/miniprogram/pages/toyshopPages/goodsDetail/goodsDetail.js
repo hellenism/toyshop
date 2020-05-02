@@ -1,11 +1,14 @@
 // miniprogram/pages/toyshopPages/goodsDetail/goodsDetail.js
+
+const commonConsts = require('../../../common/commonConsts');
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    coverImages:[],
   },
 
   /**
@@ -26,6 +29,15 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+    const currentItem = wx.getStorageSync(commonConsts.KEY_CURRENT_RECOMMAND_ITEM);
+    // 适配逻辑
+    const coverImages = currentItem.oriItem.imgCoverPaths.map((item)=>{
+      return '../../' + item;
+    });
+    console.log('coverImages:',coverImages);
+    this.setData({
+      coverImages:coverImages
+    });
 
   },
 

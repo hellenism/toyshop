@@ -1,6 +1,7 @@
 // miniprogram/pages/toyshopPages/mainPage/mainPage.js
 
-const dataService = require('../../../services/dataService');
+const bussiService = require('../../../services/bussinessService');
+const commonConsts = require('../../../common/commonConsts');
 
 Page({
 
@@ -10,7 +11,7 @@ Page({
   data: {
     swiperCurrent: 0, //当前banner所在位置
     bannerList: [],
-    goodsNewest: [], // 推荐商品
+    goodsRecommend: [], // 推荐商品
   },
 
   /**
@@ -31,8 +32,18 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    const banner = dataService.getBanner();
-    console.log('banner:',banner);
+    // 获取banner信息
+    const banner = bussiService.getBanner();
+    this.setData({
+      bannerList:banner,
+    });
+
+    // 获取推荐信息
+    const newsetGoods = bussiService.getGoodsRecommend();
+    console.log('newsetGoods:',newsetGoods);
+    this.setData({
+      goodsRecommend:newsetGoods,
+    });
   },
 
   /**
@@ -68,5 +79,29 @@ Page({
    */
   onShareAppMessage: function () {
 
-  }
+  },
+
+  /**
+   * banner滚动事件
+   * @param {*} e 
+   */
+  swiperchange: function(e) {
+    this.setData({
+      swiperCurrent: e.detail.current
+    })
+  },
+
+  /**
+   * 详情列表点击
+   * @param {*} e 
+   */
+  toDetailsTap: function(e) {
+    console.log('toDetailsTap',e);
+    const currentRecommandItemId = e.currentTarget.dataset.id;
+    const currentRecommandItem = this.data.goodsRecommend[currentRecommandItemId];
+    wx.setStorage({key:commonConsts.KEY_CURRENT_RECOMMAND_ITEM,data:currentRecommandItem});
+    wx.navigateTo({
+      url: "../goodsDetail/goodsDetail?id=" + currentRecommandItemId
+    });
+  },
 })

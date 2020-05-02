@@ -1,19 +1,38 @@
 <!--miniprogram/pages/toyshopPages/mainPage/mainPage.wxml-->
 <view class="page">
 	<view class="page__bd">
-		<view class="swiper-container">
-			<swiper class="swiper_box" autoplay="true" bindchange="swiperchange">
-				<block wx:for="{{bannerList}}" wx:key="*this">
-					<swiper-item>
-						<image bindtap="tapBanner" data-id="{{item.businessId}}" src="{{item.picUrl}}" />
-					</swiper-item>
-				</block>
-			</swiper>
-      <view class="dots">
-        <block wx:for="{{bannerList}}" wx:key="*this">
-          <view class="dot{{index == swiperCurrent ? ' active' : ''}}"></view>
-        </block>
-      </view>
+
+		<view class="header-container">
+			<view class="swiper-container">
+				<swiper class="swiper_box" autoplay="true" bindchange="swiperchange">
+					<block wx:for="{{bannerList}}" wx:key="*this">
+						<swiper-item>
+							<image bindtap="tapBanner" data-id="{{item.id}}" src="{{item.imgUrl}}" mode="scaleToFill" />
+						</swiper-item>
+					</block>
+				</swiper>
+				<view class="dots">
+					<block wx:for="{{bannerList}}" wx:key="*this">
+						<view class="dot{{index == swiperCurrent ? ' active' : ''}}"></view>
+					</block>
+				</view>
+			</view>
+		</view>
+
+		<view class="content-container">
+			<view class='recommend-title'>新品推荐 (这里可以放一个搜索栏)</view>
+			<view class="goods-container" wx:if="{{goodsRecommend.length > 0}}">
+				<view class="goods-box" wx:for-items="{{goodsRecommend}}" wx:key="*this" bindtap="toDetailsTap" data-id="{{item.id}}">
+					<view class="img-box">
+						<image src="{{item.imgUrl}}" class="image" mode="aspectFill" lazy-load="true" />
+					</view>
+					<view class="goods-title">{{item.name}}</view>
+					<view class="goods-price">¥ {{item.price}}</view>
+				</view>
+			</view>
+		</view>
+
+		<view class="footer-container">
 		</view>
 	</view>
 </view>

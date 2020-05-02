@@ -4,6 +4,8 @@
     "pages/toyshopPages/account/account",
     "pages/toyshopPages/market/market",
     "pages/toyshopPages/shoppingCart/shoppingCart",
+    "pages/toyshopPages/activityDetail/activityDetail",
+    "pages/toyshopPages/goodsDetail/goodsDetail",
     "pages/index/index",
     "pages/userConsole/userConsole",
     "pages/storageConsole/storageConsole",
@@ -16,16 +18,14 @@
     "pages/openapi/callback/callback",
     "pages/openapi/cloudid/cloudid",
     "pages/im/im",
-    "pages/im/room/room",
-    "pages/toyshopPages/activityDetail/activityDetail",
-    "pages/toyshopPages/goodsDetail/goodsDetail"
+    "pages/im/room/room"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#F6D247",
+    "navigationBarBackgroundColor": "#DC143C",
     "navigationBarTitleText": "镇沅小霸王养成中心",
-    "navigationBarTextStyle": "black"
+    "navigationBarTextStyle": "white"
   },
   "tabBar": {
     "color": "#7A7E83",
