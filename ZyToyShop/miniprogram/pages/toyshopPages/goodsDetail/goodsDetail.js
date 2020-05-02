@@ -1,23 +1,18 @@
-// miniprogram/pages/toyshopPages/mainPage/mainPage.js
-
-const dataService = require('../../../services/dataService');
-
+// miniprogram/pages/toyshopPages/goodsDetail/goodsDetail.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    swiperCurrent: 0, //当前banner所在位置
-    bannerList: [],
-    goodsNewest: [], // 推荐商品
+
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log('mainPage');
+
   },
 
   /**
@@ -31,8 +26,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    const banner = dataService.getBanner();
-    console.log('banner:',banner);
+
   },
 
   /**

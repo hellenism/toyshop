@@ -1,2 +1,19 @@
 <!--miniprogram/pages/toyshopPages/mainPage/mainPage.wxml-->
-<text>活动页</text>
+<view class="page">
+	<view class="page__bd">
+		<view class="swiper-container">
+			<swiper class="swiper_box" autoplay="true" bindchange="swiperchange">
+				<block wx:for="{{bannerList}}" wx:key="*this">
+					<swiper-item>
+						<image bindtap="tapBanner" data-id="{{item.businessId}}" src="{{item.picUrl}}" />
+					</swiper-item>
+				</block>
+			</swiper>
+      <view class="dots">
+        <block wx:for="{{bannerList}}" wx:key="*this">
+          <view class="dot{{index == swiperCurrent ? ' active' : ''}}"></view>
+        </block>
+      </view>
+		</view>
+	</view>
+</view>
