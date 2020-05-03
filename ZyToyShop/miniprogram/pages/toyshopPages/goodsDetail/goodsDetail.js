@@ -8,7 +8,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    coverImages:[],
+    coverImages: [],
+    detailImages: [],
   },
 
   /**
@@ -30,15 +31,23 @@ Page({
    */
   onShow: function () {
     const currentItem = wx.getStorageSync(commonConsts.KEY_CURRENT_RECOMMAND_ITEM);
+
     // 适配逻辑
-    const coverImages = currentItem.oriItem.imgCoverPaths.map((item)=>{
+    const coverImages = currentItem.oriItem.imgCoverPaths.map((item) => {
       return '../../' + item;
     });
-    console.log('coverImages:',coverImages);
-    this.setData({
-      coverImages:coverImages
+
+    const detailImages = currentItem.oriItem.imgDetailPaths.map((item) => {
+      const image = {
+        imgUrl: item
+      };
+      return image;
     });
 
+    this.setData({
+      coverImages: coverImages,
+      detailImages: detailImages
+    });
   },
 
   /**

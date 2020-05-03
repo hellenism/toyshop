@@ -1,15 +1,21 @@
 <!--miniprogram/pages/toyshopPages/goodsDetail/goodsDetail.wxml-->
-<view class="header-container">
-	<scroll-view class='detail' scroll-y>
-		<w-swiper class='d-swiper' images="{{topImages}}" />
-		<w-base-info baseInfo="{{baseInfo}}"/>
-  <!-- <w-shop-info shopInfo="{{shopInfo}}"/>
-  <w-detail-info detailInfo="{{detailInfo}}"/>
-  <w-param-info paramInfo="{{paramInfo}}"/>
-  <w-comment-info commentInfo="{{commentInfo}}"/>
-  <w-recommend-info recommends="{{recommends}}"/> -->
-	</scroll-view>
-</view>
-<view class="content-container"></view>
-<view class="footer-container"></view>
-<w-bottom-bar bind:addcart="onAddCart" />
+<scroll-view class='detail' scroll-y>
+	<w-swiper class='d-swiper' images="{{coverImages}}" />
+
+	<view class='info-container'>
+		<view class='info-item-name'>我是三级头</view>
+		<view class='info-item-price'>99 RMB</view>
+	</view>
+
+
+	<view class='item-description'>商品介绍</view>
+	<view class='item-description-detail'>你好，我是商品介绍详情。你好，我是商品介绍详情。你好，我是商品介绍详情。你好，我是商品介绍详情。你好，我是商品介绍详情。你好，我是商品介绍详情。你好，我是商品介绍详情。你好，我是商品介绍详情。你好，我是商品介绍详情。你好，我是商品介绍详情。你好，我是商品介绍详情。你好，我是商品介绍详情。你好，我是商品介绍详情。你好，我是商品介绍详情。你好，我是商品介绍详情。你好，我是商品介绍详情。你好，我是商品介绍详情。</view>
+
+	<view class='detail-container' wx:if="{{detailImages.length > 0}}">
+		<view class="goods-box" wx:for-items="{{detailImages}}" wx:key="*this">
+			<image src="{{item.imgUrl}}" class="image" mode="aspectFill" lazy-load="true" />
+		</view>
+	</view>
+
+</scroll-view>
+<w-bottom-bar/>
