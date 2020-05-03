@@ -1,3 +1,5 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "w-tab-control": "./childComp/w-tab-control/w-tab-control"
+  }
 }

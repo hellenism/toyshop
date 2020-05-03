@@ -38,6 +38,6 @@
 }
 
 .buy {
-  background: #ff5777;
+  background: #DC143C;
   color: #fff;
 }

@@ -1,10 +1,12 @@
-// pages/detail/childCpns/w-bottom-bar/w-bottom-bar.js
+// pages/profile/childCpns/w-list-view/w-list-view.js
 Component({
   /**
    * 组件的属性列表
    */
   properties: {
-
+    infos: {
+      type: Array
+    }
   },
 
   /**
@@ -18,11 +20,6 @@ Component({
    * 组件的方法列表
    */
   methods: {
-    onAddCart() {
-      this.triggerEvent('addcart', {}, {});
-    },
-    onBuy(){
-      this.triggerEvent('buy', {}, {});
-    },
+
   }
 })

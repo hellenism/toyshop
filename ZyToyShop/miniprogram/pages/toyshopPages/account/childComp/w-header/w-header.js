@@ -1,4 +1,4 @@
-// pages/detail/childCpns/w-bottom-bar/w-bottom-bar.js
+// pages/profile/childCpns/w-header/w-header.js
 Component({
   /**
    * 组件的属性列表
@@ -18,11 +18,6 @@ Component({
    * 组件的方法列表
    */
   methods: {
-    onAddCart() {
-      this.triggerEvent('addcart', {}, {});
-    },
-    onBuy(){
-      this.triggerEvent('buy', {}, {});
-    },
+
   }
 })

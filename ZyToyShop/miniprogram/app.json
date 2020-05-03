@@ -6,6 +6,8 @@
     "pages/toyshopPages/shoppingCart/shoppingCart",
     "pages/toyshopPages/activityDetail/activityDetail",
     "pages/toyshopPages/goodsDetail/goodsDetail",
+    "pages/toyshopManager/activityEditor/activityEditor",
+    "pages/toyshopManager/goodsEditor/goodsEditor",
     "pages/index/index",
     "pages/userConsole/userConsole",
     "pages/storageConsole/storageConsole",

@@ -1,22 +1,18 @@
-// miniprogram/pages/toyshopPages/market/market.js
-const bussiService = require('../../../services/bussinessService');
-const commonConsts = require('../../../common/commonConsts');
-
+// miniprogram/pages/toyshopManager/goods/goodsEditor.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    titles: ["玩具", "文具", "母婴"],
-    goodsCurrent: [], // 推荐商品
+
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log('market');
+
   },
 
   /**
@@ -30,11 +26,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    // 获取推荐信息
-    const newsetGoods = bussiService.getGoodsRecommend();
-    this.setData({
-      goodsCurrent: newsetGoods,
-    });
+
   },
 
   /**
@@ -70,9 +62,5 @@ Page({
    */
   onShareAppMessage: function () {
 
-  },
-  
-  tabClick(e) {
-    console.log(e.detail.index);
-  },
+  }
 })

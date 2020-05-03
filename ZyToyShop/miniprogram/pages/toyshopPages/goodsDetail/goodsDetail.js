@@ -83,5 +83,13 @@ Page({
    */
   onShareAppMessage: function () {
 
-  }
+  },
+
+  onAddCart(){
+    console.log('onAddCart');
+  },
+
+  onBuy(){
+    console.log('onBuy');
+  },
 })

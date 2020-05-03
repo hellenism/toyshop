@@ -1,3 +1,8 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "w-header": "./childComp/w-header/w-header",
+    "w-info": "./childComp/w-info/w-info",
+    "w-list-view": "./childComp/w-list-view/w-list-view"
+  },
+  "navigationBarTitleText": "个人中心"
 }
