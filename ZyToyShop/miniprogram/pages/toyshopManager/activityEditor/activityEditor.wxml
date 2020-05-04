@@ -1,2 +1,2 @@
 <!--miniprogram/pages/toyshopManager/activity/activityEditor.wxml-->
-<button>添加</button>
+<button bindtap="onBtnClickAdd">添加</button>
