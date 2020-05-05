@@ -33,16 +33,21 @@ Page({
    */
   onShow: function () {
     // 获取banner信息
-    const banner = bussiService.getBanner();
-    this.setData({
-      bannerList:banner,
+    bussiService.getBanner((banner) => {
+      this.setData({
+        bannerList: banner,
+      });
+    }, (error) => {
+      console.error('bussiService getBanner error:', error);
     });
 
     // 获取推荐信息
-    const newsetGoods = bussiService.getGoodsRecommend();
-    console.log('newsetGoods:',newsetGoods);
-    this.setData({
-      goodsRecommend:newsetGoods,
+    bussiService.getGoodsRecommend((goods) => {
+      this.setData({
+        goodsRecommend: goods,
+      });
+    }, (error) => {
+      console.error('bussiService getGoodsRecommend error:', error);
     });
   },
 
@@ -85,7 +90,7 @@ Page({
    * banner滚动事件
    * @param {*} e 
    */
-  swiperchange: function(e) {
+  swiperchange: function (e) {
     this.setData({
       swiperCurrent: e.detail.current
     })
@@ -95,13 +100,23 @@ Page({
    * 详情列表点击
    * @param {*} e 
    */
-  toDetailsTap: function(e) {
-    console.log('toDetailsTap',e);
+  toDetailsTap: function (e) {
+    console.log('toDetailsTap', e);
     const currentRecommandItemId = e.currentTarget.dataset.id;
-    const currentRecommandItem = this.data.goodsRecommend[currentRecommandItemId];
-    wx.setStorage({key:commonConsts.KEY_CURRENT_RECOMMAND_ITEM,data:currentRecommandItem});
+    const currentRecommandItem = this._getGoodsRecommendItemWithId(currentRecommandItemId);
+    wx.setStorage({
+      key: commonConsts.KEY_CURRENT_RECOMMAND_ITEM,
+      data: currentRecommandItem
+    });
     wx.navigateTo({
       url: "../goodsDetail/goodsDetail?id=" + currentRecommandItemId
     });
   },
+
+  _getGoodsRecommendItemWithId(id) {
+    const filterResult = this.data.goodsRecommend.filter((item, index) => {
+      return item.id === id;
+    });
+    return filterResult.length > 0 ? filterResult[0] : null;
+  }
 })

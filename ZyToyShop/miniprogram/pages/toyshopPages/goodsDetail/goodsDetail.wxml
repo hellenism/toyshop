@@ -3,13 +3,13 @@
 	<w-swiper class='d-swiper' images="{{coverImages}}" />
 
 	<view class='info-container'>
-		<view class='info-item-name'>我是三级头</view>
-		<view class='info-item-price'>99 RMB</view>
+		<view class='info-item-name'>{{name}}</view>
+		<view class='info-item-price'>{{price}}RMB</view>
 	</view>
 
 
 	<view class='item-description'>商品介绍</view>
-	<view class='item-description-detail'>你好，我是商品介绍详情。你好，我是商品介绍详情。你好，我是商品介绍详情。你好，我是商品介绍详情。你好，我是商品介绍详情。你好，我是商品介绍详情。你好，我是商品介绍详情。你好，我是商品介绍详情。你好，我是商品介绍详情。你好，我是商品介绍详情。你好，我是商品介绍详情。你好，我是商品介绍详情。你好，我是商品介绍详情。你好，我是商品介绍详情。你好，我是商品介绍详情。你好，我是商品介绍详情。你好，我是商品介绍详情。</view>
+	<view class='item-description-detail'>{{description}}</view>
 
 	<view class='detail-container' wx:if="{{detailImages.length > 0}}">
 		<view class="goods-box" wx:for-items="{{detailImages}}" wx:key="*this">

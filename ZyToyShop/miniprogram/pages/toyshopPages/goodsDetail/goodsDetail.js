@@ -10,6 +10,9 @@ Page({
   data: {
     coverImages: [],
     detailImages: [],
+    name: '',
+    price: 0,
+    description: ''
   },
 
   /**
@@ -32,21 +35,12 @@ Page({
   onShow: function () {
     const currentItem = wx.getStorageSync(commonConsts.KEY_CURRENT_RECOMMAND_ITEM);
 
-    // 适配逻辑
-    const coverImages = currentItem.oriItem.imgCoverPaths.map((item) => {
-      return '../../' + item;
-    });
-
-    const detailImages = currentItem.oriItem.imgDetailPaths.map((item) => {
-      const image = {
-        imgUrl: item
-      };
-      return image;
-    });
-
     this.setData({
-      coverImages: coverImages,
-      detailImages: detailImages
+      coverImages: currentItem.coverImages,
+      detailImages: currentItem.detailImages,
+      name: currentItem.name,
+      price: currentItem.price,
+      description: currentItem.description,
     });
   },
 
@@ -85,11 +79,11 @@ Page({
 
   },
 
-  onAddCart(){
+  onAddCart() {
     console.log('onAddCart');
   },
 
-  onBuy(){
+  onBuy() {
     console.log('onBuy');
   },
 })

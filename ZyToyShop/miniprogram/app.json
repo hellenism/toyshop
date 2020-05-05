@@ -1,13 +1,14 @@
 {
   "pages": [
     "pages/toyshopPages/mainPage/mainPage",
+    "pages/toyshopManager/goodsEditor/goodsEditor",
+    "pages/toyshopManager/activityEditor/activityEditor",
+
     "pages/toyshopPages/account/account",
     "pages/toyshopPages/market/market",
     "pages/toyshopPages/shoppingCart/shoppingCart",
     "pages/toyshopPages/activityDetail/activityDetail",
     "pages/toyshopPages/goodsDetail/goodsDetail",
-    "pages/toyshopManager/activityEditor/activityEditor",
-    "pages/toyshopManager/goodsEditor/goodsEditor",
     "pages/index/index",
     "pages/userConsole/userConsole",
     "pages/storageConsole/storageConsole",

@@ -1,2 +1,9 @@
 <!--miniprogram/pages/toyshopManager/goods/goodsEditor.wxml-->
+<input placeholder="添加id" bindinput="idInput"/>
+<input placeholder="添加商品名称" bindinput="nameInput"/>
+<input placeholder="添加商品价格" bindinput="priceInput"/>
+<input placeholder="添加商品简介" bindinput="summaryInput"/>
+<input placeholder="添加商品详细介绍" bindinput="descriptionInput"/>
+<block>当前图片数量:{{images.length}}</block>
+<button bindtap="onBtnClickAddImages">添加图片</button>
 <button bindtap="onBtnClickAdd">添加</button>
